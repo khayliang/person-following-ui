@@ -9,8 +9,10 @@ export default {
   state: {
     string:"hello",
     detection_indices: [],
-    stream_url: "",
-    selected_target: null
+    selected_target: null,
+    deepsort_stream: "http://localhost:8080/stream?topic=/person_tracking/deepsort_image&type=ros_compressed",
+    camera_stream: "http://localhost:8080/stream?topic=/camera/image_raw&type=ros_compressed",
+    rosbridge_url: null
   },
 
   subscriptions: {

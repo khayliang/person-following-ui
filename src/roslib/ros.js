@@ -1,10 +1,10 @@
 import ROSLIB from "roslib"
 
-function initialize_ros(){
+function initialize_ros(url='ws://localhost:9090'){
   // Connecting to ROS
   // -----------------
   var ros = new ROSLIB.Ros({
-    url : 'ws://localhost:9090'
+    url : url
   })
 
   ros.on('connection', function() {

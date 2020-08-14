@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { connect } from 'dva';
 import { Radio, Button } from 'antd';
-import ros_names from '../roslib/ros_names'
 
 import "./IndexPage.css";
 import 'antd/dist/antd.css';
@@ -40,13 +39,13 @@ function IndexPage({dispatch, ros_state}) {
     if (_deepsort_source){
       setState({
         deepsort_source: _deepsort_source,
-        url: ros_names.streams.deepsort_stream
+        url: ros_state.deepsort_stream
       })
     }
     else{
       setState({
         deepsort_source: _deepsort_source,
-        url: ros_names.streams.camera_stream
+        url: ros_state.camera_stream
       }) 
     }
     console.log(state)
